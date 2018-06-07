@@ -40,5 +40,3 @@ def find_mox_events(mox, times):
     
     return mox_events
     
-if __name__=="__main__":
-    find_mox_events([0]*161, np.arange(161))

@@ -1,5 +1,5 @@
 #test_find_mox_events
-import find_mox_events as fme
+from find_mox_events import find_mox_events as fme
 import numpy as np
 import pytest
 import random
