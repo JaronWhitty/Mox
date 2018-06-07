@@ -1,0 +1,7 @@
+pandas
+numpy
+random
+scipy
+coverage
+pytest
+coveralls
