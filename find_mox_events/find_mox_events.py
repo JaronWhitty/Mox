@@ -4,7 +4,17 @@ import pandas as pd
 import numpy as np
 
 def find_mox_events(mox, times):
-    #filter
+    """
+    Takes the mox sensor data from a session and returns the 
+    times and magnitude of the 'mox events'
+    
+    Args:
+        mox (list): list of the raw data from the sensor
+        times (list): list of the corresponding timestamps
+    Retruns:
+        mox_events (dict): a dictionary with keys being the
+        timestamp of event, and value being the magnitude.
+    """
     mox = mox[160:]
     times = times[160:]
     last = mox[0]
