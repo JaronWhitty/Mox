@@ -1,5 +1,5 @@
 #test_find_mox_events
-from find_mox_events import find_mox_events as fme
+from find_mox_events.find_mox_events import find_mox_events as fmox
 import numpy as np
 import pytest
 import random
@@ -29,11 +29,11 @@ def set_up_mox():
 
 def test_find_mox_events(set_up_mox):
     mox, times, bmox, btimes, varmox, vartimes, varmox2, varmox3 = set_up_mox
-    events = fme.find_mox_events(mox, times)
-    bevents = fme.find_mox_events(bmox, btimes)
-    vevents = fme.find_mox_events(varmox, vartimes)
-    vevents2 = fme.find_mox_events(varmox2, vartimes)
-    vevents3 = fme.find_mox_events(varmox3, vartimes)
+    events = fmox(mox, times)
+    bevents = fmox(bmox, btimes)
+    vevents = fmox(varmox, vartimes)
+    vevents2 = fmox(varmox2, vartimes)
+    vevents3 = fmox(varmox3, vartimes)
     assert len(vevents3) != 0
     assert len(vevents2) == 0
     assert len(vevents) == 0
