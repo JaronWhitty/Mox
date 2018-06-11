@@ -4,3 +4,4 @@ scipy
 coverage
 pytest
 coveralls
+sphinxcontrib-napoleon
