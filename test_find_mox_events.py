@@ -34,15 +34,14 @@ def test_find_mox_events(set_up_mox):
     vevents = fmox(varmox, vartimes)
     vevents2 = fmox(varmox2, vartimes)
     vevents3 = fmox(varmox3, vartimes)
-    assert len(vevents3) != 0
-    assert len(vevents2) == 0
-    assert len(vevents) == 0
+    assert len(vevents3['magnitude']) != 0
+    assert len(vevents2['magnitude']) == 0
+    assert len(vevents['magnitude']) == 0
     assert type(vevents) == dict
-    assert len(bevents) == 0
+    assert len(bevents['magnitude']) == 0
     assert type(bevents) == dict
-    assert np.shape(bevents) == ()
-    assert len(events) == 0
+    assert len(events['magnitude']) == 0
     assert type(events) == dict
-    assert np.shape(events) == ()
+
     
     

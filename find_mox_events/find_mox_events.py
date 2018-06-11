@@ -53,8 +53,8 @@ def find_mox_events(mox, times, start_cut = 160, jump_cut_off= 300, peak_min = 6
         if ((std[peak] > (np.mean(std)+num_std*np.std(std)) and std[peak] > peak_min) or std[peak] > sure_peak) and mox[peak] > 0:
             tpeaks.append(peak)
     mox_events = {}
-    mox_events['timestamps'] = times[tpeaks]
-    mox_events['magnitude'] = std[tpeaks]
+    mox_events['timestamps'] = list(pd.Series(times)[tpeaks])
+    mox_events['magnitude'] = list(pd.Series(std)[tpeaks])
     
     return mox_events
     
