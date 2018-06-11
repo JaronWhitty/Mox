@@ -7,7 +7,7 @@ Submodules
 find\_mox\_events.find\_mox\_events module
 ------------------------------------------
 
-.. automodule:: find_mox_events.find_mox_events
+.. automodule:: find_mox_events/find_mox_events.find_mox_events
     :members:
     :undoc-members:
     :show-inheritance:
